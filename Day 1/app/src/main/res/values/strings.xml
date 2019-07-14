@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="btn_text">Sign In</string>
+
+</resources>
