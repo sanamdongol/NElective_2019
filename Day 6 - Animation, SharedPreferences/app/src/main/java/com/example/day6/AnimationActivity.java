@@ -34,6 +34,7 @@ public class AnimationActivity extends AppCompatActivity implements View.OnClick
         btnBlink.setOnClickListener(this);
         btnZoom.setOnClickListener(this);
         btnFade.setOnClickListener(this);
+        btnNextPage.setOnClickListener(this);
 
         /*btnBlink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +65,7 @@ public class AnimationActivity extends AppCompatActivity implements View.OnClick
                 break;
             case R.id.btn_next_page:
                 Intent intent = new Intent(AnimationActivity.this, SharedActivity.class);
+                intent.putExtra("name", "Neetes");
                 startActivity(intent);
                 break;
 
