@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/new_game"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="Share"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/help"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Edit" />
+
+    <item
+        android:id="@+id/help1"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:orderInCategory="1"
+        android:title="Add" />
+
+    <item
+        android:id="@+id/help2"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:orderInCategory="99"
+        android:title="Read" />
+</menu>
