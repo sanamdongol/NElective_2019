@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        Button btnNextPage = findViewById(R.id.btn);
         Button btnPopUp = findViewById(R.id.btnPopUp);
         btnPopUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,17 +27,19 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 showPopUpMenu(view);
             }
         });
+
+        btnNextPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AutoCompleteActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void showPopUpMenu(View view) {
-       /* PopupMenu popup = new PopupMenu(this, view);
-        MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.game_menu, popup.getMenu());
-        popup.show();*/
 
         PopupMenu popup = new PopupMenu(this, view);
-
-        // This activity implements OnMenuItemClickListener
         popup.setOnMenuItemClickListener(this);
         popup.inflate(R.menu.game_menu);
         popup.show();
@@ -56,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             default:
                 return false;
         }
-
     }
 
     @Override
@@ -68,8 +69,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-      switch (item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.new_game:
                 //toast
                 Toast.makeText(this, "First menu", Toast.LENGTH_SHORT).show();
@@ -80,8 +80,9 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 return super.onOptionsItemSelected(item); //returns false
         }
     }
-        return super.onOptionsItemSelected(item);
-    }
-
 
 }
+
+
+
+
