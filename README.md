@@ -10,6 +10,7 @@ Day 4 	- Fonts and Dialogs
 Day 5 	- Shapes, Menus(Option Menu, PopUp Menu), AutoCompeteTextView
 
 Day 6 	- Animation, Sharedpreferences
+Day 6(Revision) - Shapes,Menu, Autocomplete
 
 Day 7:8	- Room Database
 
