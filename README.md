@@ -11,6 +11,8 @@ Day 5 	- Shapes, Menus(Option Menu, PopUp Menu), AutoCompeteTextView
 
 Day 6 	- Animation, Sharedpreferences
 
+Day 6(Revision) - Shapes,Menu, Autocomplete
+
 Day 7:8	- Room Database
 
 Day 9:10- Activity Life Cycle, Fragments
