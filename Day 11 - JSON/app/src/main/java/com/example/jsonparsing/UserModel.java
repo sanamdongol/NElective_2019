@@ -1,10 +1,14 @@
 package com.example.jsonparsing;
 
+import com.google.gson.annotations.SerializedName;
+
 public class UserModel {
 
     private String id;
     private String email;
+    @SerializedName("first_name")
     private String firstName;
+    @SerializedName("last_name")
     private String lastName;
     private String avatar;
 

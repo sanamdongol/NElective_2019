@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,14 +46,18 @@ public class MainActivity extends AppCompatActivity {
             userModelList = new ArrayList<>();
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObj = jsonArray.getJSONObject(i);
-                String id = jsonObj.getString("id");
+
+                Gson gson = new Gson();
+                UserModel userModel = gson.fromJson(String.valueOf(jsonObj),
+                        UserModel.class);
+                userModelList.add(userModel);
+           /*     String id = jsonObj.getString("id");
                 String email = jsonObj.getString("email");
                 String firstName = jsonObj.getString("first_name");
                 String lastName = jsonObj.getString("last_name");
                 String image = jsonObj.getString("avatar");
 
-               /* Gson gson = new Gson();
-                UserModel model = gson.fromJson(gson, UserModel.class);*/
+
 
                 UserModel userModel = new UserModel();
                 userModel.setId(id);
@@ -60,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 userModel.setLastName(lastName);
                 userModel.setAvatar(image);
 
-                userModelList.add(userModel);
+                userModelList.add(userModel);*/
 
 
                 String values = String.format("%s %s", "Id " + id, "Email " + email);
