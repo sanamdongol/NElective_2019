@@ -3,11 +3,14 @@ package com.example.jsonparsing;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -19,10 +22,11 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MainActivity";
 
     private List<UserModel> userModelList;
+    Button btnChangeToJson;
 
     private LinearLayout linearLayout;
 
@@ -32,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         linearLayout = findViewById(R.id.linearLayout);
+        btnChangeToJson = findViewById(R.id.btn_to_json);
+        btnChangeToJson.setOnClickListener(this);
 
         String jsonResult = loadJSONFromAsset();
 
@@ -69,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 userModelList.add(userModel);*/
 
 
-                String values = String.format("%s %s", "Id " + id, "Email " + email);
-                Log.e(TAG, values);
+              /*  String values = String.format("%s %s", "Id " + id, "Email " + email);
+                Log.e(TAG, values);*/
             }
 
 
@@ -87,10 +93,15 @@ public class MainActivity extends AppCompatActivity {
             TextView tvId = linearView.findViewById(R.id.tv_id);
             TextView tvName = linearView.findViewById(R.id.tv_full_name);
             TextView tvEmail = linearView.findViewById(R.id.tv_email);
+            ImageView userImage = linearView.findViewById(R.id.imageView);
 
             tvId.setText(userModelList.get(i).getId());
             tvName.setText(userModelList.get(i).getFirstName() + " " + userModelList.get(i).getLastName());
             tvEmail.setText(userModelList.get(i).getEmail());
+            // Picasso.get().load(userModelList.get(i).getAvatar()).placeholder(R.mipmap.ic_launcher).into(userImage);
+// load image using glide
+            Glide.with(this).load(userModelList.get(i).getAvatar()).into(userImage);
+
             // linearLayout.removeView(linearView);
             linearLayout.addView(linearView);
 
@@ -118,5 +129,13 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
         return json;
+    }
+
+    @Override
+    public void onClick(View view) {
+        Student student = new Student(100, "Jack", "Biology Group");
+        Gson gson = new Gson();
+        String jsonResult = gson.toJson(student);
+        Log.e(TAG, jsonResult);
     }
 }
