@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpinnerAndMultiLanguage</string>
+    <string name="good_morning">शुभ - प्रभात</string>
+    <string name="good_night">शुभ रात्री</string>
+    <string name="nice_to_meet_you">तपाईँलाई भेटेर खुशी लाग्यो</string>
+</resources>

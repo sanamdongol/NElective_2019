@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpinnerAndMultiLanguage</string>
+    <string name="good_morning">Bonjour</string>
+    <string name="good_night">Bonne nuit</string>
+    <string name="nice_to_meet_you">Ravi de vous rencontrer</string>
+</resources>

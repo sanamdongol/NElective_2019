@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SpinnerAndMultiLanguage</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="good_night">Good Night</string>
+    <string name="nice_to_meet_you">Nice to meet you</string>
+
+    <string-array name="planets">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+</resources>
