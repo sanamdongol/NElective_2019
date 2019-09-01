@@ -18,3 +18,9 @@ Day 7:8	- Room Database
 Day 9:10- Activity Life Cycle, Fragments
 
 Day 11 - JSON
+
+Day 12 - JSON,GSON,Picasso, Glide
+
+Day 13 - Spinner, Multi-Language
+
+
