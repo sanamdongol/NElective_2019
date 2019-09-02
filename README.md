@@ -1,5 +1,5 @@
 
-Day 1 	- Layouts Practice and Simple Login Form.
+Day 1 	- Layouts Practice and Login Form.
 
 Day 2 	- Revision of Day 1 and Intents and intent extras
 
