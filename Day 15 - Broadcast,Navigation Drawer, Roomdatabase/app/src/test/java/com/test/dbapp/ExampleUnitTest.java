@@ -1,4 +1,4 @@
-package com.test.db;
+package com.test.dbapp;
 
 import org.junit.Test;
 

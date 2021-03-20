@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_menu_one"
+        android:icon="@android:drawable/star_on"
+        android:title="Item 1" />
+    <item
+        android:id="@+id/nav_menu_two"
+        android:icon="@android:drawable/star_big_off"
+        android:title="Item 2" />
+    <item android:title="Item 3" />
+    <item android:title="Item 4" />
+    <item android:title="Item 5" />
+    <item android:title="Item 6" />
+    <item android:title="Item 7" />
+    <item android:title="Item 8" />
+</menu>
