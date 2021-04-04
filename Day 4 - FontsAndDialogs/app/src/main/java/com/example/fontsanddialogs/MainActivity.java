@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 View customView = inflater.inflate(R.layout.layout_custom_dialog, null);
                 Button btnBuy = customView.findViewById(R.id.btnBuy);
                 Button btnSell = customView.findViewById(R.id.btnSell);
+                ImageView img = customView.findViewById(R.id.imageView2);
 
                 btnBuy.setOnClickListener(new View.OnClickListener() {
                     @Override
